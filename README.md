@@ -1,8 +1,8 @@
 # EPSTEIN
-EPSTEIN is an experimental programming language with a mysterious, conspiracy-inspired vibe. Write `.eps` files and run them directly using the provided TypeScript interpreter.
+EPSTEIN is an experimental programming language with a mysterious, conspiracy-inspired vibe. Write `.epstein` files and run them directly using the provided TypeScript interpreter.
 
 ## Features
-- Custom syntax: `.eps` files with simple, indented blocks and unique keywords (`truth`, `lie`, `files`, `plot`, `plan`, `suicide`, `escape`, `loop`, ...).  
+- Custom syntax: `.epstein` files with simple, indented blocks and unique keywords (`truth`, `lie`, `files`, `plot`, `plan`, `suicide`, `escape`, `loop`, ...).  
 - TypeScript interpreter: A small interpreter (parser + runtime) written in TypeScript to load and run `.eps` scripts.  
 - Readable & playful: One-word variables, clear blocks, and an intentionally odd theme for creative experiments.  
 - Extensible: Add new runtime functions or tokens easily.
@@ -23,7 +23,7 @@ npm install
 3. Run an `.eps` file (example):
 
 ```bash
-npx ts-node src/index.ts eps/main.eps
+npx ts-node src/index.ts eps/main.epstein
 ```
 
 ## EPSTEIN Syntax & Variables
@@ -103,7 +103,7 @@ Project structure:
 
 ```
 epstein_project/
-├─ eps/              # .eps scripts (main.eps, missions, tests)
+├─ eps/              # .epstein scripts (main.eps, missions, tests)
 ├─ src/              # TS interpreter, parser, runtime
 │  ├─ index.ts       # entry point (run a .eps file)
 │  ├─ parser.ts
