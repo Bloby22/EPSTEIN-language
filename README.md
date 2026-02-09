@@ -3,7 +3,7 @@ EPSTEIN is an experimental programming language with a mysterious, conspiracy-in
 
 ## Features
 - Custom syntax: `.epstein` files with simple, indented blocks and unique keywords (`truth`, `lie`, `files`, `plot`, `plan`, `suicide`, `escape`, `loop`, ...).  
-- TypeScript interpreter: A small interpreter (parser + runtime) written in TypeScript to load and run `.eps` scripts.  
+- TypeScript interpreter: A small interpreter (parser + runtime) written in TypeScript to load and run `.epstein` scripts.  
 - Readable & playful: One-word variables, clear blocks, and an intentionally odd theme for creative experiments.  
 - Extensible: Add new runtime functions or tokens easily.
 
