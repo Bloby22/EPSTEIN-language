@@ -1,121 +1,147 @@
-# EPSTEIN
-EPSTEIN is an experimental programming language with a mysterious, conspiracy-inspired vibe. Write `.epstein` files and run them directly using the provided TypeScript interpreter.
+# EPSTEIN Language (Python)
 
-## Features
-- Custom syntax: `.epstein` files with simple, indented blocks and unique keywords (`truth`, `lie`, `files`, `plot`, `plan`, `suicide`, `escape`, `loop`, ...).  
-- TypeScript interpreter: A small interpreter (parser + runtime) written in TypeScript to load and run `.epstein` scripts.  
-- Readable & playful: One-word variables, clear blocks, and an intentionally odd theme for creative experiments.  
-- Extensible: Add new runtime functions or tokens easily.
+**EPSTEIN** is a custom programming language with Python-like indentation syntax.  
+It is executed via a Python interpreter, allowing `.epc` files to be run directly.
 
-## Getting Started
-1. Clone the repository:
-```bash
-git clone https://github.com/YOUR_USERNAME/EPSTEIN-language.git
-cd EPSTEIN-language
+---
+
+## 1️⃣ Features
+
+- Indentation-based syntax similar to Python
+- Custom keywords mapped to runtime values
+- Built-in functions like `files`, `risk`, `theory`, `money`
+- Supports loops, conditionals, and function blocks
+- Extendable runtime with custom Python functions
+
+---
+
+## 2️⃣ Variable & Token Mapping
+
+| EPSTEIN    | Python runtime mapping          |
+|------------|--------------------------------|
+| truth      | True                           |
+| lie        | False                          |
+| deal       | str                            |
+| alibi      | None                           |
+| files      | Runtime.files() / print        |
+| theory     | Runtime.theory() / float       |
+| suicide    | return / sys.exit              |
+| money      | Runtime.money() / bool         |
+| famous     | def                            |
+| girl       | dict                           |
+| island     | Runtime.island() / list        |
+| plot       | function block                 |
+| shadow     | lambda / anonymous function    |
+| risk       | Runtime.risk() / float         |
+| secret     | Runtime.secret() / set         |
+| enemy      | dict                           |
+| weapon     | Runtime.weapon() / list        |
+| mission    | Runtime.mission() / tuple      |
+| power      | int / float                    |
+| ghost      | str                            |
+| time       | int / float                    |
+| light      | bool                           |
+| government | dict                           |
+| universe   | None                           |
+| circle     | lambda                         |
+| escape     | break / sys.exit               |
+| crew       | list                           |
+| plan       | function block                 |
+| agenda     | dict                           |
+
+---
+
+## 3️⃣ Syntax Examples
+
+### Variable assignment
+```epstein
+deal = "Classified"
+power = 9000
+truth = truth
 ````
 
-2. Install dependencies:
+### Print / Output
 
-```bash
-npm install
+```epstein
+files "Hello world"
+files deal
 ```
 
-3. Run an `.eps` file (example):
+### Conditionals
 
-```bash
-npx ts-node src/index.ts eps/main.epstein
-```
-
-## EPSTEIN Syntax & Variables
-
-Use one-word variable names and simple, indented blocks. Below is a quick reference of common tokens and what they map to in the runtime/TypeScript interpreter.
-
-| EPSTEIN    | Runtime / TS mapping            | Notes                    |
-| ---------- | ------------------------------- | ------------------------ |
-| truth      | true                            | boolean true             |
-| lie        | false                           | boolean false            |
-| deal       | string                          | text / message           |
-| alibi      | null                            | placeholder / none       |
-| files      | Runtime.files() → console.log() | print/output             |
-| theory     | Runtime.theory() → Number()     | numeric conversion       |
-| suicide    | return / process.exit()         | terminate program        |
-| money      | Runtime.money() → Boolean()     | boolean conversion       |
-| famous     | function                        | runtime function slot    |
-| girl       | object                          | generic object           |
-| island     | Runtime.island() → Array        | array constructor        |
-| plot       | function / block                | function block (plot:)   |
-| shadow     | lambda / anonymous function     | inline small function    |
-| risk       | Runtime.risk() → Number         | float/parseFloat         |
-| secret     | Runtime.secret() → Set          | set constructor          |
-| enemy      | object                          | generic object           |
-| weapon     | Runtime.weapon() → Array        | array constructor        |
-| mission    | Runtime.mission() → tuple/array | fixed list / tuple style |
-| power      | number                          | numeric                  |
-| ghost      | string                          | text                     |
-| time       | number                          | numeric / counter        |
-| light      | boolean                         | boolean                  |
-| government | object                          | object/dict              |
-| universe   | null                            | placeholder              |
-| circle     | lambda                          | math helper              |
-| escape     | break / process.exit()          | break / exit             |
-| crew       | array                           | list of members          |
-| plan       | function / block                | function block (plan:)   |
-| agenda     | object / dict                   | mapping of steps         |
-
-## Commands / Statements
-
-* files "message" → print text or a variable value (calls Runtime.files() / console.log).
-* plot: / plan: → define a block / function. Indent the block body.
-* if <expr>: / else: → conditional blocks. Use EPSTEIN tokens in expressions.
-* loop <array>: → iterate over an array; inside loop use item to refer to the current element.
-* suicide → immediate program termination (maps to process.exit() in runtime).
-* escape → break / exit context (maps to break or process.exit()).
-
-## Example eps/main.eps
-
-```
-files "Mission started"
-truth = true
-deal = "hidden deal"
-
-plot:
-    files "Plot routine running"
-    theory = 9000
-
+```epstein
 if truth:
-    files "The truth is revealed"
+    files "Approved"
 else:
-    files "This is a lie"
+    files "Denied"
+```
 
-crew = ["Alice", "Bob", "Charlie"]
+### Loops
+
+```epstein
+crew = ["Alice", "Bob"]
+
 loop crew:
     files item
-
-plan:
-    files deal
-
-escape
 ```
 
-## Development & Tests
+Equivalent Python:
 
-Project structure:
-
-```
-epstein_project/
-├─ eps/              # .epstein scripts (main.eps, missions, tests)
-├─ src/              # TS interpreter, parser, runtime
-│  ├─ index.ts       # entry point (run a .eps file)
-│  ├─ parser.ts
-│  ├─ interpreter.ts
-│  └─ runtime.ts
-├─ tests/            # simple tests that run .eps files
-├─ package.json
-├─ tsconfig.json
-└─ README.md
+```python
+for item in crew:
+    print(item)
 ```
 
+### Function Blocks
 
+```epstein
+plot infiltration:
+    files "Inside base"
 
-Chceš, abych rovnou připravil i **verzi s emoji a tajemným konspiračním stylem**, aby vypadal víc EPSTEIN?
+plan escape:
+    files "Escape started"
 ```
+
+---
+
+## 4️⃣ Installation
+
+Install via pip (once published):
+
+```bash
+pip install epstein
+```
+
+Or run locally:
+
+```bash
+git clone https://github.com/bloby22/EPSTEIN-language
+cd epstein
+python -m pip install .
+```
+
+---
+
+## 5️⃣ Usage
+
+```python
+from epstein import Interpreter, parse_file
+
+program = parse_file("script.eps")
+interpreter = Interpreter()
+interpreter.execute(program)
+```
+
+---
+
+## 6️⃣ Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Submit a pull request
+
+---
+
+## 7️⃣ License
+
+MIT License
