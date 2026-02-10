@@ -17,38 +17,37 @@ It is executed via a Python interpreter, allowing `.epc` files to be run directl
 
 ## 2️⃣ Variable & Token Mapping
 
-| EPSTEIN    | Python runtime mapping          |
-|------------|--------------------------------|
-| truth      | True                           |
-| lie        | False                          |
-| deal       | str                            |
-| alibi      | None                           |
-| files      | Runtime.files() / print        |
-| theory     | Runtime.theory() / float       |
-| suicide    | return / sys.exit              |
-| money      | Runtime.money() / bool         |
-| famous     | def                            |
-| girl       | dict                           |
-| island     | Runtime.island() / list        |
-| plot       | function block                 |
-| shadow     | lambda / anonymous function    |
-| risk       | Runtime.risk() / float         |
-| secret     | Runtime.secret() / set         |
-| enemy      | dict                           |
-| weapon     | Runtime.weapon() / list        |
-| mission    | Runtime.mission() / tuple      |
-| power      | int / float                    |
-| ghost      | str                            |
-| time       | int / float                    |
-| light      | bool                           |
-| government | dict                           |
-| universe   | None                           |
-| circle     | lambda                         |
-| escape     | break / sys.exit               |
-| crew       | list                           |
-| plan       | function block                 |
-| agenda     | dict                           |
-
+| EPSTEIN    | Python mapping / runtime          |
+|------------|---------------------------------- |
+| truth      | True                              |
+| lie        | False                             |
+| deal       | str                               |
+| alibi      | None                              |
+| files      | print()                           |
+| theory     | float() / int()                   |
+| suicide    | return / sys.exit()               |
+| money      | bool()                            |
+| famous     | function                          |
+| girl       | dict                              |
+| island     | list                              |
+| plot       | def / block                       |
+| shadow     | lambda                            |
+| risk       | float()                           |
+| secret     | set()                             |
+| enemy      | dict                              |
+| weapon     | list                              |
+| mission    | tuple                             |
+| power      | int                               |
+| ghost      | str                               |
+| time       | int                               |
+| light      | bool                              |
+| government | dict                              |
+| universe   | None                              |
+| circle     | lambda                            |
+| escape     | break / sys.exit()                |
+| crew       | list                              |
+| plan       | def / block                       |
+| agenda     | dict                              |
 ---
 
 ## 3️⃣ Syntax Examples
